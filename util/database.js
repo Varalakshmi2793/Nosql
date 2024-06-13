@@ -5,12 +5,12 @@ let _db;
 
 const mongoConnect = callback => {
   MongoClient.connect(
-    'mongodb://localhost:27017', // Connection string for local MongoDB
+    'mongodb://localhost:27017', 
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
     .then(client => {
       console.log('Connected to MongoDB!');
-      _db = client.db('shop'); // Replace 'shop' with your database name
+      _db = client.db('shop'); 
       callback();
     })
     .catch(err => {
