@@ -36,7 +36,7 @@ mongoose
   .connect(
     'mongodb://localhost:27017/shop', 
     { useNewUrlParser: true, useUnifiedTopology: true }
-  )
+ )
   .then(result => {
     User.findOne().then(user => {
       if (!user) {
